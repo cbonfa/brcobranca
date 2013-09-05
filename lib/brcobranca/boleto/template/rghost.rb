@@ -141,25 +141,25 @@ module Brcobranca
           doc.show boleto.codigo_barras.linha_digitavel, :tag => :grande
           doc.moveto :x => '0.5 cm' , :y => '23 cm'
           doc.show boleto.cedente
-          doc.moveto :x => '0.5 cm' , :y => '21 cm'
-          doc.show "na casa do pedrinho"
+          doc.moveto :x => '0.5 cm' , :y => '22.7 cm'
+          doc.show "RUA DAS LOUCURAS DE PIRIRI, 820 - SP - SP"
           doc.moveto :x => '11 cm' , :y => '23 cm'
           doc.show boleto.agencia_conta_boleto
           doc.moveto :x => '14.2 cm' , :y => '23 cm'
           doc.show boleto.especie
           doc.moveto :x => '15.7 cm' , :y => '23 cm'
           doc.show boleto.quantidade
-          doc.moveto :x => '0.7 cm' , :y => '22.2 cm'
+          doc.moveto :x => '0.7 cm' , :y => '21.8 cm'
           doc.show boleto.numero_documento
-          doc.moveto :x => '7 cm' , :y => '22.2 cm'
+          doc.moveto :x => '7 cm' , :y => '21.8 cm'
           doc.show "#{boleto.documento_cedente.formata_documento}"
-          doc.moveto :x => '12 cm' , :y => '22.2 cm'
+          doc.moveto :x => '12 cm' , :y => '21.8 cm'
           doc.show boleto.data_vencimento.to_s_br
           doc.moveto :x => '16.5 cm' , :y => '23 cm'
           doc.show boleto.nosso_numero_boleto
-          doc.moveto :x => '16.5 cm' , :y => '22.2 cm'
+          doc.moveto :x => '16.5 cm' , :y => '21.8 cm'
           doc.show boleto.valor_documento.to_currency
-          doc.moveto :x => '1.4 cm' , :y => '20.9 cm'
+          doc.moveto :x => '1.4 cm' , :y => '20.3 cm'
           doc.show "#{boleto.sacado} - #{boleto.sacado_documento.formata_documento}"
           doc.moveto :x => '1.4 cm' , :y => '20.6 cm'
           doc.show "#{boleto.sacado_endereco}"
