@@ -162,7 +162,7 @@ module Brcobranca
           doc.moveto :x => '2 cm' , :y => '20.6 cm'
           doc.show "#{boleto.sacado} - #{boleto.sacado_documento.formata_documento}"
           doc.moveto :x => '2 cm' , :y => '20.3 cm'
-          doc.show "#{boleto.sacado_endereco}aaaa"
+          doc.show "#{boleto.sacado_endereco}"
           #FIM Primeira parte do BOLETO
         end
 
