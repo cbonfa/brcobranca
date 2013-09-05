@@ -159,9 +159,9 @@ module Brcobranca
           doc.show boleto.nosso_numero_boleto
           doc.moveto :x => '16.5 cm' , :y => '21.8 cm'
           doc.show boleto.valor_documento.to_currency
-          doc.moveto :x => '1.4 cm' , :y => '20.3 cm'
+          doc.moveto :x => '1.5 cm' , :y => '20.3 cm'
           doc.show "#{boleto.sacado} - #{boleto.sacado_documento.formata_documento}"
-          doc.moveto :x => '1.4 cm' , :y => '20.6 cm'
+          doc.moveto :x => '1.5 cm' , :y => '20.6 cm'
           doc.show "#{boleto.sacado_endereco}"
           #FIM Primeira parte do BOLETO
         end
