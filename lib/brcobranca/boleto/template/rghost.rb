@@ -142,7 +142,7 @@ module Brcobranca
           doc.moveto :x => '0.5 cm' , :y => '23 cm'
           doc.show boleto.cedente
           doc.moveto :x => '0.5 cm' , :y => '22.7 cm'
-          doc.show "RUA DAS LOUCURAS DE PIRIRI, 820 - SP - SP"
+          doc.show boleto.cedente_endereco
           doc.moveto :x => '11 cm' , :y => '23 cm'
           doc.show boleto.agencia_conta_boleto
           doc.moveto :x => '14.2 cm' , :y => '23 cm'
