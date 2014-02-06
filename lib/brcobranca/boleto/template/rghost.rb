@@ -126,7 +126,7 @@ module Brcobranca
 
           doc.define_tags do
             tag :grande, :size => 13
-            tag :pequeno, :size => 8
+            tag :pequeno, :size => 6
           end
         end
 
