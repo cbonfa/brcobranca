@@ -136,9 +136,9 @@ module Brcobranca
           doc.image(boleto.logotipo, :x => '0.5 cm', :y => '23.85 cm', :zoom => 80)
           # Dados
           #doc.moveto :x => '5.2 cm' , :y => '23.85 cm'
-          doc.moveto :x => '5.2 cm' , :y => '23.55 cm'
+          doc.moveto :x => '5.2 cm' , :y => '23.95 cm'
           doc.show "#{boleto.banco}-#{boleto.banco_dv}", :tag => :grande
-          doc.moveto :x => '7.5 cm' , :y => '23.55 cm'
+          doc.moveto :x => '7.5 cm' , :y => '23.95 cm'
           doc.show boleto.codigo_barras.linha_digitavel, :tag => :grande
           doc.moveto :x => '0.5 cm' , :y => '23 cm'
           doc.show boleto.cedente
@@ -172,9 +172,9 @@ module Brcobranca
           #INICIO Segunda parte do BOLETO BB
           # LOGOTIPO do BANCO
           doc.image(boleto.logotipo, :x => '0.5 cm', :y => '16.8 cm', :zoom => 80)
-          doc.moveto :x => '5.2 cm' , :y => '16.8 cm'
+          doc.moveto :x => '5.2 cm' , :y => '16.9 cm'
           doc.show "#{boleto.banco}-#{boleto.banco_dv}", :tag => :grande
-          doc.moveto :x => '7.5 cm' , :y => '16.8 cm'
+          doc.moveto :x => '7.5 cm' , :y => '16.9 cm'
           doc.show boleto.codigo_barras.linha_digitavel, :tag => :grande
           doc.moveto :x => '0.7 cm' , :y => '16 cm'
           doc.show boleto.local_pagamento
