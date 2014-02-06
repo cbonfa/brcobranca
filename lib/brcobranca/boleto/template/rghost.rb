@@ -135,9 +135,10 @@ module Brcobranca
           # LOGOTIPO do BANCO
           doc.image(boleto.logotipo, :x => '0.5 cm', :y => '23.85 cm', :zoom => 80)
           # Dados
-          doc.moveto :x => '5.2 cm' , :y => '23.85 cm'
+          #doc.moveto :x => '5.2 cm' , :y => '23.85 cm'
+          doc.moveto :x => '5.2 cm' , :y => '23.55 cm'
           doc.show "#{boleto.banco}-#{boleto.banco_dv}", :tag => :grande
-          doc.moveto :x => '7.5 cm' , :y => '23.85 cm'
+          doc.moveto :x => '7.5 cm' , :y => '23.55 cm'
           doc.show boleto.codigo_barras.linha_digitavel, :tag => :grande
           doc.moveto :x => '0.5 cm' , :y => '23 cm'
           doc.show boleto.cedente
