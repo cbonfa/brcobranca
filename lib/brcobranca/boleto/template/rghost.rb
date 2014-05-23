@@ -168,8 +168,9 @@ module Brcobranca
 
           # imprimi informacoes extras se houver
           boleto.infos.each do |key, value|
-            doc.moveto :x => key[0].to_s + " cm" , :y => (29.6 - key[1]).to_s + " cm"
-            doc.show value, :tag => :pequeno
+            doc.text_in :x => key[0].to_s + " cm", :y => (29.6 - key[1]).to_s + " cm", :write => value,:tag => :pequeno
+            # doc.moveto :x => key[0].to_s + " cm" , :y => (29.6 - key[1]).to_s + " cm"
+            # doc.show value, :tag => :pequeno
           end
           #FIM Primeira parte do BOLETO
         end
