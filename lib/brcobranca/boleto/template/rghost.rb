@@ -165,6 +165,12 @@ module Brcobranca
           doc.show "#{boleto.sacado} - #{boleto.sacado_documento.formata_documento}"
           doc.moveto :x => '2 cm' , :y => '20.2 cm'
           doc.show "#{boleto.sacado_endereco}"
+
+          # imprimi informacoes extras se houver
+          boleto.infos.each do |key, value|
+            doc.moveto :x => key[0].to_s + "cm" , :y => key[1].to_s + "cm"
+            doc.show value, :tag => :pequeno
+          end
           #FIM Primeira parte do BOLETO
         end
 

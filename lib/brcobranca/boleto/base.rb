@@ -73,6 +73,8 @@ module Brcobranca
       attr_accessor :sacado_endereco
       # <b>REQUERIDO</b>: Documento da pessoa que receberá o boleto
       attr_accessor :sacado_documento
+      # <b>OPCIONAL<b>: informacos extras
+      attr_accessor :infos
 
       # Validações
       validates_presence_of :agencia, :conta_corrente, :moeda, :especie_documento, :especie, :aceite, :numero_documento, :message => "não pode estar em branco."
@@ -81,6 +83,9 @@ module Brcobranca
       # Nova instancia da classe Base
       # @param [Hash] campos
       def initialize(campos={})
+        # inicializa hash extra infos
+        self.infos = {}
+
         padrao = {
           :moeda => "9", :data_documento => Date.today, :dias_vencimento => 1, :quantidade => 1,
           :especie_documento => "DM", :especie => "R$", :aceite => "S", :valor => 0.0,
@@ -93,6 +98,10 @@ module Brcobranca
         end
 
         yield self if block_given?
+      end
+
+      def extra(posicao, valor)
+        self.infos.merge!(posicao => valor)
       end
 
       # Logotipo do banco
