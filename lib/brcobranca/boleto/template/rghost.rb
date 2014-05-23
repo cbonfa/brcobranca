@@ -168,7 +168,7 @@ module Brcobranca
 
           # imprimi informacoes extras se houver
           boleto.infos.each do |key, value|
-            doc.text_area my_text, :width => "15 cm", :text_align => :left, :x => key[0].to_s + " cm", :y => (29.6 - key[1]).to_s + " cm", :row_height => 0.25,:tag => :pequeno
+            doc.text_area value, :width => "15 cm", :text_align => :left, :x => key[0].to_s + " cm", :y => (29.6 - key[1]).to_s + " cm", :row_height => 0.25,:tag => :pequeno
 
             # doc.text_in :x => key[0].to_s + " cm", :y => (29.6 - key[1]).to_s + " cm", :write => value,:tag => :pequeno
             # doc.moveto :x => key[0].to_s + " cm" , :y => (29.6 - key[1]).to_s + " cm"
